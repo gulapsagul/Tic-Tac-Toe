@@ -1,0 +1,111 @@
+/* Base styles - mobile first */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.Board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(211, 193, 193);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(191, 113, 113, 0.2);
+  width: 100%;
+  max-width: 350px;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+.square {
+  width: 90px;
+  height: 90px;
+  margin: 5px;
+  border: 2px solid #231e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #260909;
+  cursor: pointer;
+  background-color: #fdfdfd;
+  transition: background-color 0.3s ease;
+}
+
+.square:hover {
+  background-color: #eee;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* ✅ Responsive styles for larger screens */
+@media screen and (min-width: 600px) {
+  .square {
+    width: 100px;
+    height: 100px;
+  }
+
+  .Board-container {
+    max-width: 400px;
+    padding: 30px;
+  }
+
+  button {
+    font-size: 1.1rem;
+  }
+}
+
+.win {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #bfd6f2;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.win h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+/* Optional: make it responsive */
+@media screen and (max-width: 400px) {
+  .win h1 {
+    font-size: 1.5rem;
+  }
+}
